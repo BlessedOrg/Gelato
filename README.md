@@ -1,8 +1,8 @@
-# Blessed Ticketing Solution Feedback
+# Blessed Gelato.networks Feedback
 
 ## Introduction
 
-Welcome to the GitHub repository for **Blessed experience with Gelato.Networks**, a ticketing solution developed during our participation in the Infinite Space Bazaar Hackathon. 
+Welcome to the GitHub repository for Blessed experience with Gelato.Networks, a onchain ticketing solution developed during our participation in the Infinite Space Bazaar Hackathon. 
 This document provides an overview of our experience during the hackathon, and the key findings and lessons learned using Gelato.networks.
 
 ## Project Overview
