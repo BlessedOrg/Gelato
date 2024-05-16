@@ -47,8 +47,6 @@ During the hackathon, we utilized a new tech stack to build Blessed, which inclu
    - **Solution**: We need to check if we can sign off with Thirdweb and then it was fine.
 3. **Challenge 3**: Error using the SDK for adding a new task to the VRF
    - **Solution**:
-   - ```solidity
-  // Example Solidity code snippet by Adam
     const functionSignature = '_fulfillRandomness(uint256,uint256,bytes)';
   const functionSelector = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(functionSignature)).slice(0, 10);
   const params = {
@@ -58,8 +56,7 @@ During the hackathon, we utilized a new tech stack to build Blessed, which inclu
   }
   const { taskId, tx } = await gelatoAutomate.createTask(params as any);
 
---------------
-that triggers:
+triggers:
 
  "cannot estimate gas; transaction may fail or may require manual gas limit [ See: https://links.ethers.org/v5-errors-UNPREDICTABLE_GAS_LIMIT ] (error={\"reason\":\"execution reverted: Automate._validModules: PROXY is required\",\"code\":\"UNPREDICTABLE_GAS_LIMIT\",\"method\":\"estimateGas\",\"transaction\":{\"from\":\"0x727b6D0a1DD1cA8f3132B6Bc8E1Cfa0C04CAb806\",\"maxPriorityFeePerGas\":{\"type\":\"BigNumber\",\"hex\":\"0x59682f00\"},\"maxFeePerGas\":{\"type\":\"BigNumber\",\"hex\":\"0x59682f64\"},\"to
 
