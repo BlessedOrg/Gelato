@@ -46,8 +46,7 @@ During the hackathon, we utilized a new tech stack to build Blessed, which inclu
 2. **Challenge 2**: Using Account Abstraction of Thirdweb and Gelato Gasless relay.
    - **Solution**: We need to check if we can sign off with Thirdweb and then it was fine.
 3. **Challenge 3**: Error using the SDK for adding a new task to the VRF
-   - **Solution**:
-   - ```solidity
+   - **Solution**:```solidity
 // Example Solidity code
 pragma solidity ^0.8.0;
 
