@@ -48,10 +48,7 @@ During the hackathon, we utilized a new tech stack to build Blessed, which inclu
 3. **Challenge 3**: Error using the SDK for adding a new task to the VRF
    - **Solution**:
 ```solidity
-// Example Solidity code
-pragma solidity ^0.8.0;
-
-contract Codesnippet {
+Codesnippet that caused it: 
 const functionSignature = '_fulfillRandomness(uint256,uint256,bytes)';
 const functionSelector = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(functionSignature)).slice(0, 10);
 const params = 
@@ -60,13 +57,16 @@ const params =
     execSelector: functionSelector,
   }
 const { taskId, tx } = await gelatoAutomate.createTask(params as any);
-}
+
 ```
 
+Errir Message
 
-triggers:
 ```
- "cannot estimate gas; transaction may fail or may require manual gas limit [ See: https://links.ethers.org/v5-errors-UNPREDICTABLE_GAS_LIMIT ] (error={\"reason\":\"execution reverted: Automate._validModules: PROXY is required\",\"code\":\"UNPREDICTABLE_GAS_LIMIT\",\"method\":\"estimateGas\",\"transaction\":{\"from\":\"0x727b6D0a1DD1cA8f3132B6Bc8E1Cfa0C04CAb806\",\"maxPriorityFeePerGas\":{\"type\":\"BigNumber\",\"hex\":\"0x59682f00\"},\"maxFeePerGas\":{\"type\":\"BigNumber\",\"hex\":\"0x59682f64\"},\"to
+ "cannot estimate gas; transaction may fail or may require manual gas limit
+ [ See: https://links.ethers.org/v5-errors-UNPREDICTABLE_GAS_LIMIT ]
+(error={\"reason\":\"execution reverted: Automate._validModules:
+PROXY is required\",\"code\":\"UNPREDICTABLE_GAS_LIMIT\",\"method\":\"estimateGas\",\"transaction\":{\"from\":\"0x727b6D0a1DD1cA8f3132B6Bc8E1Cfa0C04CAb806\",\"maxPriorityFeePerGas\":{\"type\":\"BigNumber\",\"hex\":\"0x59682f00\"},\"maxFeePerGas\":{\"type\":\"BigNumber\",\"hex\":\"0x59682f64\"},\"to
 ```
 Just simply add **dedicatedMsgSender: true**, to the params and it will stop complaining about PROXY
 
