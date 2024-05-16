@@ -47,6 +47,10 @@ During the hackathon, we utilized a new tech stack to build Blessed, which inclu
    - **Solution**: We need to check if we can sign off with Thirdweb and then it was fine.
 3. **Challenge 3**: Error using the SDK for adding a new task to the VRF
    - **Solution**:
+
+// Code that trigggered the error
+pragma solidity ^0.8.0;
+
     const functionSignature = '_fulfillRandomness(uint256,uint256,bytes)';
   const functionSelector = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(functionSignature)).slice(0, 10);
   const params = {
