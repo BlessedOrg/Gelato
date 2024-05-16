@@ -60,7 +60,7 @@ const { taskId, tx } = await gelatoAutomate.createTask(params as any);
 
 ```
 
-Errir Message
+Error Message
 
 ```
  "cannot estimate gas; transaction may fail or may require manual gas limit
@@ -71,6 +71,7 @@ PROXY is required\",\"code\":\"UNPREDICTABLE_GAS_LIMIT\",\"method\":\"estimateGa
 Just simply add **dedicatedMsgSender: true**, to the params and it will stop complaining about PROXY
 
 
-
+**Challenge 4**: Temporary lagging network at various times 
+   - **Solution**: As we were uanble to deploy contracts we informed suppor
 
 
