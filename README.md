@@ -41,7 +41,7 @@ During the hackathon, we utilized a new tech stack to build Blessed, which inclu
 
 ### Findings that might help others
 
-1. **Challenge 1**: VRF and Whitelist
+1. **Challenge 1**: VRF and Whitelist  
    **Solution**: When we started we were trying to access https://app.gelato.network/vrf?chainId=123420111 but fugured out due to the help of Gelato by providing the contract and we assume it needed to be whitelisted. So maybe mention that in your VRF docs. 
 
 2. **Challenge 2**: Problem with the Modulo Operator
@@ -57,14 +57,14 @@ randomNumber % (eligibleParticipants.length - j) = 20 % 5 = 0
 In this case, n would always be j, meaning no effective randomness is added, and no participant positions are swapped.
 
 Solution Options
-To address this issue, one possible solution is to ensure that randomNumber is better distributed and not just a static value.
+To address this issue, one possible solution is to ensure that randomNumber is better distributed and not just a static value.  
 
-**Solution**: Check if we sign off with Thirdweb works and then it was fine.
+**Solution**: Check if we sign off with Thirdweb works and then it was fine.  
 
-3. **Challenge 4**: Using Account Abstraction of Thirdweb and Gelato relay.
- **Solution**: Check if we sign off with Thirdweb works and then it was fine.
+3. **Challenge 4**: Using Account Abstraction of Thirdweb and Gelato relay.  
+ **Solution**: Check if we sign off with Thirdweb works and then it was fine.  
 
-4. **Challenge 5**: Error using the SDK for adding a new task to the VRF
+4. **Challenge 5**: Error using the SDK for adding a new task to the VRF  
    **Solution**:
 ```solidity
 Codesnippet that caused it: 
@@ -91,7 +91,7 @@ Just simply add **dedicatedMsgSender: true**, to the params and it will stop com
 
 
 
-**Challenge 6**: Temporary lagging network at various times 
+**Challenge 6**: Temporary lagging network at various times   
 **Solution**: As we were uanble to deploy contracts we informed support. 
 
 
