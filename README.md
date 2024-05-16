@@ -42,7 +42,8 @@ During the hackathon, we utilized a new tech stack to build Blessed, which inclu
 ### Findings that might help others
 
 1. **Challenge 1**: VRF and Whitelist
-   - **Solution**: When we started we were trying to access https://app.gelato.network/vrf?chainId=123420111 but fugured out due to the help of Gelato by providing the contract and we assume it needed to be whitelisted. So maybe mention that in your VRF docs. 
+   **Solution**: When we started we were trying to access https://app.gelato.network/vrf?chainId=123420111 but fugured out due to the help of Gelato by providing the contract and we assume it needed to be whitelisted. So maybe mention that in your VRF docs. 
+
 2. **Challenge 2**: Problem with the Modulo Operator
 When randomNumber is a multiple of eligibleParticipants.length - j, the result of the modulo operation will be 0:
 ```
@@ -58,11 +59,13 @@ In this case, n would always be j, meaning no effective randomness is added, and
 Solution Options
 To address this issue, one possible solution is to ensure that randomNumber is better distributed and not just a static value.
 
-   - **Solution**: Check if we sign off with Thirdweb works and then it was fine.
+**Solution**: Check if we sign off with Thirdweb works and then it was fine.
+
 3. **Challenge 4**: Using Account Abstraction of Thirdweb and Gelato relay.
-   - **Solution**: Check if we sign off with Thirdweb works and then it was fine.
+ **Solution**: Check if we sign off with Thirdweb works and then it was fine.
+
 4. **Challenge 5**: Error using the SDK for adding a new task to the VRF
-   - **Solution**:
+   **Solution**:
 ```solidity
 Codesnippet that caused it: 
 const functionSignature = '_fulfillRandomness(uint256,uint256,bytes)';
@@ -87,7 +90,8 @@ PROXY is required\",\"code\":\"UNPREDICTABLE_GAS_LIMIT\",\"method\":\"estimateGa
 Just simply add **dedicatedMsgSender: true**, to the params and it will stop complaining about PROXY
 
 
+
 **Challenge 6**: Temporary lagging network at various times 
-   - **Solution**: As we were uanble to deploy contracts we informed support. 
+**Solution**: As we were uanble to deploy contracts we informed support. 
 
 
