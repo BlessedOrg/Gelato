@@ -56,10 +56,8 @@ randomNumber % (eligibleParticipants.length - j) = 20 % 5 = 0
 ```
 In this case, n would always be j, meaning no effective randomness is added, and no participant positions are swapped.
 
-Solution Options
+**Solution**: 
 To address this issue, one possible solution is to ensure that randomNumber is better distributed and not just a static value.  
-
-**Solution**: Check if we sign off with Thirdweb works and then it was fine.  
 
 3. **Challenge 4**: Using Account Abstraction of Thirdweb and Gelato relay.  
  **Solution**: Check if we sign off with Thirdweb works and then it was fine.  
