@@ -65,9 +65,9 @@ To address this issue, one possible solution is to ensure that randomNumber is b
  **Solution**: Check if we sign off with Thirdweb works and then it was fine.  
 
 4. **Challenge 5**: Error using the SDK for adding a new task to the VRF  
-   **Solution**:
+   Codesnippet that caused it: 
 ```solidity
-Codesnippet that caused it: 
+
 const functionSignature = '_fulfillRandomness(uint256,uint256,bytes)';
 const functionSelector = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(functionSignature)).slice(0, 10);
 const params = 
@@ -87,6 +87,7 @@ Error Message
 (error={\"reason\":\"execution reverted: Automate._validModules:
 PROXY is required\",\"code\":\"UNPREDICTABLE_GAS_LIMIT\",\"method\":\"estimateGas\",\"transaction\":{\"from\":\"0x727b6D0a1DD1cA8f3132B6Bc8E1Cfa0C04CAb806\",\"maxPriorityFeePerGas\":{\"type\":\"BigNumber\",\"hex\":\"0x59682f00\"},\"maxFeePerGas\":{\"type\":\"BigNumber\",\"hex\":\"0x59682f64\"},\"to
 ```
+**Solution**:
 Just simply add **dedicatedMsgSender: true**, to the params and it will stop complaining about PROXY
 
 
