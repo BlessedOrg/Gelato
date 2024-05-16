@@ -50,15 +50,14 @@ During the hackathon, we utilized a new tech stack to build Blessed, which inclu
 
 // Code that trigggered the error
 pragma solidity ^0.8.0;
-
-    const functionSignature = '_fulfillRandomness(uint256,uint256,bytes)';
-  const functionSelector = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(functionSignature)).slice(0, 10);
-  const params = {
-    name: taskName || `VRF task ${new Date().toISOString()}`,
+const functionSignature = '_fulfillRandomness(uint256,uint256,bytes)';
+const functionSelector = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(functionSignature)).slice(0, 10);
+const params = 
+{name: taskName || `VRF task ${new Date().toISOString()}`,
     execAddress: contractAddr,
     execSelector: functionSelector,
   }
-  const { taskId, tx } = await gelatoAutomate.createTask(params as any);
+const { taskId, tx } = await gelatoAutomate.createTask(params as any);
 
 triggers:
 
